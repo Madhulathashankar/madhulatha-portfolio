@@ -1,46 +1,157 @@
-body {
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  color: #1f2937;
   line-height: 1.6;
-  background: #f8f9fa;
-  color: #333;
 }
 
+/* Layout */
 section {
-  padding: 40px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  padding: 50px 20px;
 }
 
+/* Hero */
 .hero {
   text-align: center;
-  background: #ffffff;
+  padding: 80px 20px 70px;
+  animation: fadeIn 1s ease-in;
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 42px;
+  font-weight: 700;
 }
 
 .hero h2 {
-  color: #555;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #4b5563;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 20px auto;
+  font-size: 16px;
+  color: #374151;
+}
+
+/* Links */
+.links {
+  margin-top: 25px;
 }
 
 .links a {
-  margin: 10px;
+  margin: 0 12px;
   text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
+  color: #2563eb;
+  font-weight: 600;
+  position: relative;
 }
 
+.links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+/* Section titles */
+h3 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  border-left: 4px solid #2563eb;
+  padding-left: 12px;
+}
+
+/* Cards */
 .card {
   background: #ffffff;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 22px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.8s ease forwards;
 }
 
+.card h4 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.card b {
+  color: #2563eb;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-6px);
+  transition: transform 0.3s ease;
+}
+
+/* Leadership & Skills */
+.box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Contact */
 .contact {
   text-align: center;
+}
+
+.contact p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
 }
