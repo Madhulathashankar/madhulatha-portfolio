@@ -2,89 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Madhulatha S | Flutter Team Lead</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(120deg, #fde047, #38bdf8);
+      color: #0f172a;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      background: #0f172a;
+      color: #fde047;
+      padding: 8px 18px;
+      border-radius: 50px;
+      display: inline-block;
+      transform: rotate(-2deg);
+    }
+
+    .hero p {
+      margin-top: 20px;
+      max-width: 680px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .cta {
+      margin-top: 32px;
+      padding: 14px 34px;
+      border-radius: 999px;
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+    }
+
+    /* Sections */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #f9fafb;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 26px;
+      border-radius: 18px;
+      border: 1px solid #1e293b;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(56,189,248,0.15);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #cbd5f5;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+    }
+
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
 
-<section class="hero">
-  <h1>Madhulatha S</h1>
-  <h2>Flutter / Mobile Application Developer | Team Lead</h2>
-  <p>
-    3+ years of experience building and leading production-grade mobile
-    applications using Flutter, Firebase, and Node.js.
-  </p>
-
-  <div class="links">
-    <a href="https://www.linkedin.com/in/madhulatha-s-079014242/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/Madhulathashankar" target="_blank">GitHub</a>
-    <a href="mailto:madhulathashankar05@gmail.com">Email</a>
-  </div>
-</section>
-
-<section>
-  <h3>Skills</h3>
-  <div class="box">
-    Flutter, Dart, Firebase, Cloud Functions, Node.js, REST APIs, MongoDB, Git
-  </div>
-</section>
-
-<section>
-  <h3>Experience & Projects</h3>
-
-  <div class="card">
-    <h4>1EPC Construction Platform</h4>
-    <p><b>Flutter Developer</b></p>
-    <p>
-      Cross-platform construction management platform supporting Android, iOS,
-      Web, and Desktop. Implemented 3-stage BOQ workflows and purchase cycle tracking.
-    </p>
+  <div class="hero">
+    <h1>Madhulatha <span>Builds</span></h1>
+    <p>Flutter / Mobile Engineer & Team Lead crafting scalable, high‑performance mobile platforms and developer‑friendly systems.</p>
+    <a href="#projects" class="cta">View My Work</a>
   </div>
 
-  <div class="card">
-    <h4>Innovi App</h4>
-    <p><b>Team Lead | Flutter & Firebase</b></p>
-    <p>
-      Led development of 70% of the app enabling mobile access to ENOVIA data.
-      Integrated maps, multilingual support, push notifications, and Cloud Functions.
-    </p>
-  </div>
+  <section>
+    <span class="tag">About</span>
+    <h2>Engineering with ownership & impact</h2>
+    <p>I build production‑grade mobile applications, lead frontend architecture, mentor developers, and focus deeply on performance, scalability, and developer experience.</p>
+  </section>
 
-  <div class="card">
-    <h4>Smartam Mobile App</h4>
-    <p><b>Lead Flutter Developer & Team Lead</b></p>
-    <p>
-      Owned frontend architecture for a petrochemical enterprise app. Mentored
-      junior developers and delivered high-performance UI under tight deadlines.
-    </p>
-  </div>
+  <section id="projects">
+    <span class="tag">Projects</span>
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>1EPC Construction Platform</h3>
+        <p>Cross‑platform construction management system with BOQ workflows, purchase cycle tracking, and enterprise‑scale performance.</p>
+      </div>
+      <div class="card">
+        <h3>Innovi Mobile App</h3>
+        <p>Team‑led Flutter application enabling mobile access to ENOVIA data with maps, FCM, and Cloud Functions.</p>
+      </div>
+      <div class="card">
+        <h3>Smartam Enterprise App</h3>
+        <p>High‑performance petrochemical industry app with optimized UI, data handling, and scalable architecture.</p>
+      </div>
+    </div>
+  </section>
 
-  <div class="card">
-    <h4>Gemini ChatBot</h4>
-    <p><b>Flutter / AI Integration</b></p>
-    <p>
-      Built an AI-powered chatbot capable of intelligently responding to user
-      queries using conversational logic.
-    </p>
-  </div>
-</section>
-
-<section>
-  <h3>Leadership</h3>
-  <div class="box">
-    Team Lead experience mentoring junior developers, conducting code reviews,
-    planning features, and ensuring on-time delivery of enterprise mobile applications.
-  </div>
-</section>
-
-<section class="contact">
-  <h3>Contact</h3>
-  <p>Email: madhulathashankar05@gmail.com</p>
-  <p>Location: Bengaluru, India</p>
-</section>
+  <footer>
+    <p>📧 madhulathashankar05@gmail.com · <a href="https://github.com/Madhulathashankar">GitHub</a> · <a href="https://www.linkedin.com/in/madhulatha-s-079014242/">LinkedIn</a></p>
+  </footer>
 
 </body>
 </html>
-
-
