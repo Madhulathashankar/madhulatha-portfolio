@@ -8,153 +8,132 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Inter', Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      color: #111827;
+      line-height: 1.6;
     }
 
-    /* Hero */
+    /* Japanese minimal theme */
     .hero {
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(120deg, #fde047, #38bdf8);
-      color: #0f172a;
       padding: 40px 20px;
-      position: relative;
+      background: #ffffff;
     }
 
     .hero h1 {
-      font-size: clamp(48px, 8vw, 96px);
-      font-weight: 800;
-      letter-spacing: -2px;
-    }
-
-    .hero h1 span {
-      background: #0f172a;
-      color: #fde047;
-      padding: 8px 18px;
-      border-radius: 50px;
-      display: inline-block;
-      transform: rotate(-2deg);
-    }
-
-    .hero p {
-      margin-top: 20px;
-      max-width: 680px;
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    .cta {
-      margin-top: 32px;
-      padding: 14px 34px;
-      border-radius: 999px;
-      background: #0f172a;
-      color: #ffffff;
+      font-size: 52px;
       font-weight: 700;
-      text-decoration: none;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      letter-spacing: -1px;
     }
 
-    .cta:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+    .hero .role {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #374151;
+      font-weight: 600;
     }
 
-    /* Sections */
+    .hero .intro {
+      max-width: 820px;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #1f2937;
+    }
+
+    .links {
+      margin-bottom: 22px;
+      font-size: 15px;
+    }
+
+    .links a {
+      margin: 0 14px;
+      color: #111827;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 600;
+    }
+
     section {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 70px 20px;
     }
 
     h2 {
-      font-size: 36px;
-      font-weight: 800;
-      margin-bottom: 20px;
-      color: #f9fafb;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 18px;
     }
 
-    .tag {
-      display: inline-block;
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-weight: 600;
-      margin-bottom: 14px;
+    .about p {
+      font-size: 17px;
+      max-width: 900px;
     }
 
-    /* Cards */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
+      gap: 26px;
+      margin-top: 26px;
     }
 
     .card {
-      background: #020617;
-      padding: 26px;
-      border-radius: 18px;
-      border: 1px solid #1e293b;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(56,189,248,0.15);
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
     }
 
     .card h3 {
-      font-size: 22px;
+      font-size: 20px;
       margin-bottom: 8px;
     }
 
     .card p {
-      font-size: 15px;
-      color: #cbd5f5;
+      font-size: 15.5px;
+      color: #374151;
     }
 
-    /* Footer */
     footer {
-      padding: 40px 20px;
       text-align: center;
-      color: #94a3b8;
-      border-top: 1px solid #1e293b;
+      padding: 40px 20px;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 15px;
     }
 
     footer a {
-      color: #38bdf8;
-      text-decoration: none;
+      color: #111827;
+      text-decoration: underline;
       font-weight: 600;
     }
   </style>
 </head>
 <body>
 
-    <div class="hero">
-        <div style="margin-bottom:20px; font-weight:600;">
-      <a href="mailto:madhulathashankar05@gmail.com" style="margin-right:18px; color:#0f172a; text-decoration:underline; text-underline-offset:4px;">Email</a>
-      <a href="https://www.linkedin.com/in/madhulatha-s-079014242/" target="_blank" style="margin-right:18px; color:#0f172a; text-decoration:underline; text-underline-offset:4px;">LinkedIn</a>
-      <a href="https://github.com/Madhulathashankar" target="_blank" style="color:#0f172a; text-decoration:underline; text-underline-offset:4px;">GitHub</a>
+  <section class="hero">
+    <div class="links">
+      <a href="https://www.linkedin.com/in/madhulatha-s-079014242/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Madhulathashankar" target="_blank">GitHub</a>
+      <a href="mailto:madhulathashankar05@gmail.com">Email</a>
     </div>
 
     <h1>Madhulatha S</h1>
-    <p style="font-size:20px; font-weight:600; margin-top:12px;">
-      Software Developer | Mobile Application Developer
-    </p>
-    <p style="max-width:760px; margin-top:18px; font-size:18px;">
-      Flutter, Firebase & Node.js engineer who can build <b>end-to-end applications</b> — from scalable backend systems to robust, user‑friendly mobile and web experiences.
-    </p>
+    <div class="role">Software Developer · Mobile Application Developer</div>
 
-    <a href="#about" class="cta">Know More</a>
-  </div>
+    <p class="intro">
+      Flutter, Firebase, and Node.js engineer focused on building <strong>scalable, robust, and user-friendly</strong> applications.
+      I have around <strong>3 years of experience</strong> delivering production-grade mobile and web apps used in
+      <strong>Adani-level enterprise projects</strong>, construction management platforms, and AI-powered chatbots.
+      I can take a product from idea to production and build anything required with strong architecture and performance in mind.
+    </p>
+  </section>
 
   <section>
     <span class="tag">About</span>
