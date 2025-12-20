@@ -1,162 +1,132 @@
-/* ---------------- CUSTOM FONT ---------------- */
-@font-face {
-  font-family: 'MyFont';
-  src: url('./Myfont-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* ---------------- RESET ---------------- */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* ---------------- BODY ---------------- */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(
-    180deg,
-    #fdf2f8 0%,
-    #eef2ff 50%,
-    #ecfeff 100%
-  );
-  color: #1e293b;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  color: #1f2937;
   line-height: 1.6;
 }
 
-/* ---------------- LAYOUT ---------------- */
+/* Layout */
 section {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
-  padding: 90px 24px;
+  padding: 50px 20px;
 }
 
-/* ---------------- HERO ---------------- */
+/* Hero */
 .hero {
-  min-height: 100vh;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  animation: fadeDown 1s ease;
+  padding: 80px 20px 70px;
+  animation: fadeIn 1s ease-in;
 }
 
 .hero h1 {
-  font-family: 'MyFont', Arial, sans-serif;
-  font-size: 60px;
-  font-weight: 800;
-  background: linear-gradient(90deg, #6366f1, #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 12px;
+  font-size: 42px;
+  font-weight: 700;
 }
 
 .hero h2 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #334155;
-  margin-bottom: 22px;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #4b5563;
 }
 
 .hero p {
-  max-width: 820px;
-  margin: auto;
-  font-size: 18px;
+  max-width: 650px;
+  margin: 20px auto;
+  font-size: 16px;
+  color: #374151;
 }
 
-/* ---------------- LINKS ---------------- */
+/* Links */
 .links {
-  display: flex;
-  justify-content: center;
-  gap: 36px;
-  margin-bottom: 32px;
+  margin-top: 25px;
 }
 
 .links a {
-  font-size: 16px;
+  margin: 0 12px;
+  text-decoration: none;
+  color: #2563eb;
   font-weight: 600;
-  color: #0f172a;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
 }
 
-.links a:hover {
-  transform: translateY(-4px);
-  color: #6366f1;
-}
-
-/* ---------------- SECTION TITLE ---------------- */
-h3 {
-  font-family: 'MyFont', Arial, sans-serif;
-  font-size: 32px;
-  margin-bottom: 42px;
-}
-
-h3::after {
+.links a::after {
   content: "";
-  width: 70px;
-  height: 4px;
-  background: linear-gradient(90deg, #6366f1, #ec4899);
-  display: block;
-  margin-top: 10px;
-  border-radius: 2px;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
 }
 
-/* ---------------- WORK ---------------- */
-.work {
-  background: linear-gradient(180deg, #eef2ff, #ecfeff);
+.links a:hover::after {
+  width: 100%;
 }
 
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+/* Section titles */
+h3 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  border-left: 4px solid #2563eb;
+  padding-left: 12px;
 }
 
+/* Cards */
 .card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 18px;
-  padding: 28px;
-  box-shadow: 0 25px 50px rgba(99, 102, 241, 0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 35px 70px rgba(236, 72, 153, 0.25);
+  background: #ffffff;
+  padding: 22px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.8s ease forwards;
 }
 
 .card h4 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
-.card p {
-  font-size: 16px;
-  color: #334155;
+.card b {
+  color: #2563eb;
 }
 
-/* ---------------- FOOTER ---------------- */
-footer {
+/* Hover effect */
+.card:hover {
+  transform: translateY(-6px);
+  transition: transform 0.3s ease;
+}
+
+/* Leadership & Skills */
+.box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Contact */
+.contact {
   text-align: center;
-  padding: 50px 20px;
-  font-size: 15px;
-  color: #475569;
 }
 
-footer a {
-  color: #6366f1;
-  font-weight: 600;
+.contact p {
+  margin-top: 8px;
+  font-size: 16px;
 }
 
-/* ---------------- ANIMATIONS ---------------- */
-@keyframes fadeDown {
+/* Animations */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -164,13 +134,24 @@ footer a {
   }
 }
 
-/* ---------------- RESPONSIVE ---------------- */
-@media (max-width: 900px) {
-  .work-grid {
-    grid-template-columns: 1fr;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
   }
 
-  .hero h1 {
-    font-size: 44px;
+  .hero h2 {
+    font-size: 18px;
   }
 }
